@@ -24,7 +24,7 @@ A simple web-based task manager built with Laravel and Vue.js, featuring a RESTf
 - Docker Compose
 
 ## Setup Instructions
-1. Clone the repository:
+1. Run commands:
    ```bash
    git clone https://github.com/VladimirArtjukh/task-manager
    cd task-manager
