@@ -25,24 +25,19 @@ class TaskController extends Controller
         $this->tasksServices = $tasksServices;
     }
 
-    public function index()
+    public function index(): TaskResource
     {
         return new TaskResource($this->tasksServices->index());
-//        return response()->json($this->tasksServices->index());
     }
 
-    public function store(TaskRequest $request)
+    public function store(TaskRequest $request): TaskResource
     {
         return new TaskResource($this->tasksServices->store($request->toArray()));
-
-       // return response()->json($this->tasksServices->store($request->toArray()), Response::HTTP_CREATED);
     }
 
-    public function update(TaskRequest $request, Task $task)
+    public function update(TaskRequest $request, Task $task): TaskResource
     {
         return new TaskResource($this->tasksServices->update($request->toArray(), $task));
-
-        // return response()->json($this->tasksServices->update($request->toArray(), $task));
     }
 
     public function destroy(Task $task): JsonResponse
@@ -51,10 +46,8 @@ class TaskController extends Controller
         return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 
-    public function toggleComplete(Task $task)
+    public function toggleComplete(Task $task): TaskResource
     {
         return new TaskResource($this->tasksServices->toggleComplete($task));
-
-//        return response()->json($this->tasksServices->toggleComplete($task));
     }
 }
