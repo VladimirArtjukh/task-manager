@@ -10,15 +10,15 @@ install:
 	./vendor/bin/sail npm install
 	./vendor/bin/sail npm run build
 
-	ifeq ($(OS),Windows_NT)
-		start http://localhost/
-	else
-	ifeq ($(shell uname),Darwin)
-		open http://localhost/
-	else
-		xdg-open http://localhost/
-	endif
-	endif
+ifeq ($(OS),Windows_NT)
+	start http://localhost/
+else
+ifeq ($(shell uname),Darwin)
+	open http://localhost/
+else
+	xdg-open http://localhost/
+endif
+endif
 
 up:
 	./vendor/bin/sail up -d

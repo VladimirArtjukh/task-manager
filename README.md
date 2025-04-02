@@ -28,6 +28,7 @@ A simple web-based task manager built with Laravel and Vue.js, featuring a RESTf
    ```bash
    git clone https://github.com/VladimirArtjukh/task-manager
    cd task-manager
+   make install
 
 
 ## Running the Application
