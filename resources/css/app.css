@@ -1,0 +1,17 @@
+/* resources/css/app.css */
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Custom styles */
+.completed {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-list {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.task-item {
+    transition: all 0.3s ease;
+}
